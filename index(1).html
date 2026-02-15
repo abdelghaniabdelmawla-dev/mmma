@@ -1,0 +1,172 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>منصة تداول إلكترونية</title>
+    <style>
+    body {
+    background-color: #00ffff;
+    }
+     
+        @tailwind base;
+        @tailwind components;
+        @tailwind utilities;
+
+        .navbar {
+            @apply bg-gray-800 text-white p-4;
+        }
+
+        .hero {
+            @apply bg-gray-200 p-4;
+        }
+
+        .cms-navbar {
+            @apply bg-gray-800 text-white p-4;
+        }
+
+        .cms-content {
+            @apply p-4;
+        }
+    </style>
+</head>
+<body>
+    <!-- صفحة الهبوط -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="                            
+            <li><a href="#">تسجيل دخول</a></li>
+            <li><a href="                               
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>منصة تداول إلكترونية</h1>
+        <p>وصف المنصة</p>
+        <button>تحميل</button>
+    </div>
+
+    <!-- صفحة تسجيل دخول -->
+    <div class="login-page">
+        <h1>تسجيل دخول</h1>
+        <form>
+            <label>البريد الإلكتروني:</label>
+            <input type="email" name="email">
+            <label>كلمة المرور:</label>
+            <input type="password" name="password">
+            <button>تسجيل دخول</button>
+        </form>
+    </div>
+
+    <!-- صفحة تسجيل جديد -->
+    <div class="register-page">
+        <h1>تسجيل جديد</h1>
+        <form>
+            <label>الاسم:</label>
+            <input type="text" name="name">
+            <label>البريد الإلكتروني:</label>
+            <input type="email" name="email">
+            <label>كلمة المرور:</label>
+            <input type="password" name="password">
+            <button>تسجيل جديد</button>
+        </form>
+    </div>
+
+    <!-- صفحة التحكم -->
+    <div class="dashboard-page">
+        <nav class="cms-navbar">
+            <ul>
+                <li><a href="#">المنشورات</a></li>
+                <li><a href="                                
+                <li><a href="#">الإعدادات</a></li>
+            </ul>
+        </nav>
+        <div class="cms-content">
+            <h1>لوحة التحكم</h1>
+            <button>إضافة منشور جديد</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>عنوان المنشور</th>
+                        <th>التاريخ</th>
+                        <th>الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>منشور 1</td>
+                        <td>2023-01-01</td>
+                        <td>
+                            <button>تعديل</button>
+                            <button>حذف</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- صفحة إضافة منشور -->
+    <div class="add-post-page">
+        <h1>إضافة منشور جديد</h1>
+        <form>
+            <label>عنوان المنشور:</label>
+            <input type="text" name="title">
+            <label>محتوى المنشور:</label>
+            <textarea name="content"></textarea>
+            <button>إضافة منشور</button>
+        </form>
+    </div>
+
+    <!-- صفحة تعديل منشور -->
+    <div class="edit-post-page">
+        <h1>تعديل منشور</h1>
+        <form>
+            <label>عنوان المنشور:</label>
+            <input type="text" name="title">
+            <label>محتوى المنشور:</label>
+            <textarea name="content"></textarea>
+            <button>تعديل منشور</button>
+        </form>
+    </div>
+
+    <!-- صفحة حذف منشور -->
+    <div class="delete-post-page">
+        <h1>حذف منشور</h1>
+        <p>هل أنت متأكد من حذف هذا المنشور؟</p>
+        <button>حذف منشور</button>
+    </div>
+
+    <!-- صفحة إدارة المستخدمين -->
+    <div class="user-management-page">
+        <h1>إدارة المستخدمين</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>اسم المستخدم</th>
+                    <th>البريد الإلكتروني</th>
+                    <th>الإجراءات</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>المستخدم 1</td>
+                    <td>user1@example.com</td>
+                    <td>
+                        <button>تعديل</button>
+                        <button>حذف</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // تعريف التفاعل الخاص بالمشروع
+        const navbar = document.querySelector('.navbar');
+        const hero = document.querySelector('.hero');
+
+        // إضافة التفاعل هنا
+    </script> 
+</body>
+</html>
