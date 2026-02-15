@@ -1,172 +1,140 @@
-<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>منصة تداول إلكترونية</title>
+    <title>NexGen Bank & Trade | مستقبل الاستثمار</title>
     <style>
-    body {
-    background-color: #00ffff;
-    }
-     
-        @tailwind base;
-        @tailwind components;
-        @tailwind utilities;
+        :root { --primary-gold: #D4AF37; --deep-blue: #0A192F; --slate: #112240; --white: #E6F1FF; }
+        body { margin: 0; font-family: 'Segoe UI', Tahoma, sans-serif; background: var(--deep-blue); color: var(--white); overflow-x: hidden; }
+        
+        /* Navbar A: الخاص بصفحة الهبوط */
+        .nav-landing { display: flex; justify-content: space-between; align-items: center; padding: 20px 8%; background: rgba(10, 25, 47, 0.95); position: fixed; width: 84%; top: 0; z-index: 1000; border-bottom: 1px solid var(--primary-gold); }
+        .logo { font-size: 24px; font-weight: bold; color: var(--primary-gold); }
+        .nav-links { list-style: none; display: flex; gap: 30px; }
+        .nav-links a { text-decoration: none; color: var(--white); font-weight: 500; transition: 0.3s; }
+        .nav-links a:hover { color: var(--primary-gold); }
+        .btn-login { background: var(--primary-gold); color: var(--deep-blue) !important; padding: 10px 25px; border-radius: 4px; font-weight: bold; }
 
-        .navbar {
-            @apply bg-gray-800 text-white p-4;
-        }
+        /* Hero Section */
+        .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; background: radial-gradient(circle, #112240 0%, #0A192F 100%); }
+        .hero h1 { font-size: 55px; margin-bottom: 15px; color: var(--primary-gold); }
+        .hero p { font-size: 22px; color: #8892B0; max-width: 700px; line-height: 1.6; }
+        .cta-group { margin-top: 30px; display: flex; gap: 20px; }
+        .main-btn { padding: 15px 40px; font-size: 18px; border: none; border-radius: 5px; cursor: pointer; background: var(--primary-gold); font-weight: bold; }
 
-        .hero {
-            @apply bg-gray-200 p-4;
-        }
-
-        .cms-navbar {
-            @apply bg-gray-800 text-white p-4;
-        }
-
-        .cms-content {
-            @apply p-4;
-        }
+        /* Market Preview */
+        .market-snap { padding: 80px 8%; }
+        .market-card { background: var(--slate); padding: 30px; border-radius: 12px; border: 1px solid #233554; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th { text-align: right; color: var(--primary-gold); padding: 15px; border-bottom: 2px solid #233554; }
+        td { padding: 20px; border-bottom: 1px solid #233554; }
     </style>
 </head>
 <body>
-    <!-- صفحة الهبوط -->
-    <nav class="navbar">
-        <ul>
-            <li><a href="                            
-            <li><a href="#">تسجيل دخول</a></li>
-            <li><a href="                               
+    <nav class="nav-landing">
+        <div class="logo">NEXGEN BANK</div>
+        <ul class="nav-links">
+            <li><a href="#">الخدمات المصرفية</a></li>
+            <li><a href="#">التداول</a></li>
+            <li><a href="#">الأمان</a></li>
+            <li><a href="dashboard.html" class="btn-login">تسجيل الدخول</a></li>
         </ul>
     </nav>
-    <div class="hero">
-        <h1>منصة تداول إلكترونية</h1>
-        <p>وصف المنصة</p>
-        <button>تحميل</button>
-    </div>
 
-    <!-- صفحة تسجيل دخول -->
-    <div class="login-page">
-        <h1>تسجيل دخول</h1>
-        <form>
-            <label>البريد الإلكتروني:</label>
-            <input type="email" name="email">
-            <label>كلمة المرور:</label>
-            <input type="password" name="password">
-            <button>تسجيل دخول</button>
-        </form>
-    </div>
+    <header class="hero">
+        <h1>استثمر بثقة.. تداول بذكاء</h1>
+        <p>نظام متكامل يدمج بين الخدمات البنكية الرصينة ومنصة التداول العالمية، صُمم خصيصاً ليناسب تطلعاتك المالية.</p>
+        <div class="cta-group">
+            <button class="main-btn" onclick="location.href='dashboard.html'">فتح حساب استثماري</button>
+        </div>
+    </header>
 
-    <!-- صفحة تسجيل جديد -->
-    <div class="register-page">
-        <h1>تسجيل جديد</h1>
-        <form>
-            <label>الاسم:</label>
-            <input type="text" name="name">
-            <label>البريد الإلكتروني:</label>
-            <input type="email" name="email">
-            <label>كلمة المرور:</label>
-            <input type="password" name="password">
-            <button>تسجيل جديد</button>
-        </form>
-    </div>
-
-    <!-- صفحة التحكم -->
-    <div class="dashboard-page">
-        <nav class="cms-navbar">
-            <ul>
-                <li><a href="#">المنشورات</a></li>
-                <li><a href="                                
-                <li><a href="#">الإعدادات</a></li>
-            </ul>
-        </nav>
-        <div class="cms-content">
-            <h1>لوحة التحكم</h1>
-            <button>إضافة منشور جديد</button>
+    <section class="market-snap">
+        <div class="market-card">
+            <h2>مؤشرات السوق اللحظية</h2>
             <table>
-                <thead>
-                    <tr>
-                        <th>عنوان المنشور</th>
-                        <th>التاريخ</th>
-                        <th>الإجراءات</th>
-                    </tr>
-                </thead>
+                <thead><tr><th>الأصل</th><th>السعر الحالي</th><th>حالة السوق</th></tr></thead>
                 <tbody>
-                    <tr>
-                        <td>منشور 1</td>
-                        <td>2023-01-01</td>
-                        <td>
-                            <button>تعديل</button>
-                            <button>حذف</button>
-                        </td>
-                    </tr>
+                    <tr><td>الذهب العالمي</td><td>$2,045.50</td><td style="color:#64FFDA">↑ مستقر</td></tr>
+                    <tr><td>الدولار الرقمي</td><td>$1.00</td><td style="color:#64FFDA">↔ ثابت</td></tr>
                 </tbody>
             </table>
         </div>
+    </section>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم | NexGen CMS</title>
+    <style>
+        :root { --admin-blue: #64FFDA; --bg: #020C1B; --panel: #112240; }
+        body { margin: 0; font-family: 'Segoe UI', sans-serif; background: var(--bg); color: white; display: flex; flex-direction: column; }
+        
+        /* Navbar B: خاص بالـ CMS فقط */
+        .nav-cms { background: #0A192F; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--admin-blue); }
+        .user-profile { display: flex; align-items: center; gap: 15px; }
+        .user-icon { width: 40px; height: 40px; background: var(--admin-blue); border-radius: 50%; color: #020C1B; display: flex; align-items: center; justify-content: center; font-weight: bold; }
+        .nav-cms-links { list-style: none; display: flex; gap: 20px; }
+        .nav-cms-links a { color: #CCD6F6; text-decoration: none; font-size: 14px; padding: 8px 15px; border-radius: 4px; transition: 0.3s; }
+        .nav-cms-links a:hover { background: rgba(100, 255, 218, 0.1); color: var(--admin-blue); }
+        .logout-link { border: 1px solid #F7567C !important; color: #F7567C !important; }
+
+        .dashboard-grid { padding: 40px 5%; display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+        .stat-box { background: var(--panel); padding: 25px; border-radius: 8px; border-top: 4px solid var(--admin-blue); }
+        .stat-box h3 { font-size: 16px; color: #8892B0; margin: 0; }
+        .stat-box p { font-size: 30px; font-weight: bold; margin: 15px 0 0; color: var(--admin-blue); }
+
+        /* CMS Management Section */
+        .cms-section { grid-column: span 3; background: var(--panel); padding: 30px; border-radius: 8px; margin-top: 10px; }
+        .header-action { display: flex; justify-content: space-between; align-items: center; margin-bottom: 25px; }
+        .btn-add { background: var(--admin-blue); color: #020C1B; border: none; padding: 12px 25px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+        
+        .data-table { width: 100%; border-collapse: collapse; }
+        .data-table th { text-align: right; background: #1D2D50; padding: 15px; color: var(--admin-blue); }
+        .data-table td { padding: 15px; border-bottom: 1px solid #233554; }
+        .btn-edit { background: #FFC107; border: none; padding: 5px 12px; border-radius: 3px; cursor: pointer; margin-left: 5px; }
+        .btn-del { background: #F7567C; border: none; color: white; padding: 5px 12px; border-radius: 3px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav class="nav-cms">
+        <div class="user-profile">
+            <div class="user-icon">AD</div>
+            <span>مدير النظام: علي عثمان</span>
+        </div>
+        <ul class="nav-cms-links">
+            <li><a href="#">لوحة التحكم</a></li>
+            <li><a href="#">المستخدمين</a></li>
+            <li><a href="#">الأصول المضافة</a></li>
+            <li><a href="index.html" class="logout-link">خروج آمن</a></li>
+        </ul>
+    </nav>
+
+    <div class="dashboard-grid">
+        <div class="stat-box"><h3>إجمالي المحافظ المدارة</h3><p>1,452</p></div>
+        <div class="stat-box"><h3>حجم التداول اليومي</h3><p>$4,205,000</p></div>
+        <div class="stat-box"><h3>طلبات السحب المعلقة</h3><p>12</p></div>
+
+        <section class="cms-section">
+            <div class="header-action">
+                <h2>إدارة المحتوى المالي (CMS)</h2>
+                <button class="btn-add">+ إضافة أصل استثماري</button>
+            </div>
+            <table class="data-table">
+                <thead><tr><th>الأصل</th><th>تاريخ الإضافة</th><th>السعر الابتدائي</th><th>التحكم</th></tr></thead>
+                <tbody>
+                    <tr><td>سهم شركة التقنية العربية</td><td>2024-02-15</td><td>$145.00</td>
+                        <td><button class="btn-edit">تعديل</button><button class="btn-del">حذف</button></td>
+                    </tr>
+                    <tr><td>صندوق العقارات الدولي</td><td>2024-02-14</td><td>$1,200.00</td>
+                        <td><button class="btn-edit">تعديل</button><button class="btn-del">حذف</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </div>
-
-    <!-- صفحة إضافة منشور -->
-    <div class="add-post-page">
-        <h1>إضافة منشور جديد</h1>
-        <form>
-            <label>عنوان المنشور:</label>
-            <input type="text" name="title">
-            <label>محتوى المنشور:</label>
-            <textarea name="content"></textarea>
-            <button>إضافة منشور</button>
-        </form>
-    </div>
-
-    <!-- صفحة تعديل منشور -->
-    <div class="edit-post-page">
-        <h1>تعديل منشور</h1>
-        <form>
-            <label>عنوان المنشور:</label>
-            <input type="text" name="title">
-            <label>محتوى المنشور:</label>
-            <textarea name="content"></textarea>
-            <button>تعديل منشور</button>
-        </form>
-    </div>
-
-    <!-- صفحة حذف منشور -->
-    <div class="delete-post-page">
-        <h1>حذف منشور</h1>
-        <p>هل أنت متأكد من حذف هذا المنشور؟</p>
-        <button>حذف منشور</button>
-    </div>
-
-    <!-- صفحة إدارة المستخدمين -->
-    <div class="user-management-page">
-        <h1>إدارة المستخدمين</h1>
-        <table>
-            <thead>
-                <tr>
-                    <th>اسم المستخدم</th>
-                    <th>البريد الإلكتروني</th>
-                    <th>الإجراءات</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>المستخدم 1</td>
-                    <td>user1@example.com</td>
-                    <td>
-                        <button>تعديل</button>
-                        <button>حذف</button>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
-
-    <script>
-        // تعريف التفاعل الخاص بالمشروع
-        const navbar = document.querySelector('.navbar');
-        const hero = document.querySelector('.hero');
-
-        // إضافة التفاعل هنا
-    </script> 
 </body>
 </html>
